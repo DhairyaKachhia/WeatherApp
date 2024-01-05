@@ -1,0 +1,265 @@
+* {
+    font-family: 'Comic Neue', cursive;
+}
+
+body {
+    background-color: rgb(17, 49, 50);
+    margin: 0;
+}
+
+.website-title {
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    background-color: rgba(120,213,211,1);
+    /* background: linear-gradient(180deg, rgba(120,213,211,1) 0%, rgba(49,127,130,0.8) 49%, rgba(11,55,56,0.1) 100%);  */
+    color: #333;
+}
+
+.website-title h1 {
+    font-size: 45px;
+}
+
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-image: url("./background/mountains-night.jpg"); */
+    /* background-image: url("./background/mountains-sunset.jpg"); */
+    background-size: cover;
+    filter: blur(5px);
+    box-shadow: inset 0px -20px 70px 80px rgba(0, 0, 0, 0.2);
+
+    transition: background-image 0.5s ease-in-out;
+    z-index: -1;
+}
+
+
+.search {
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    margin: 5px;
+
+}
+
+input {
+    font-family: 'Comic Neue', cursive;
+    background-color: rgba(248, 248, 248, 0.82);
+    text-indent: 7px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size:medium;
+}
+
+::placeholder {
+    color: rgb(34, 34, 34);
+}
+
+button {
+    background-color: rgba(248, 248, 248, 0.82);
+    border-radius: 10px;
+    border: 1px solid black;
+
+    margin-left: 5px;
+}
+
+button:hover {
+    background-color: rgb(210, 206, 206);
+}
+
+button img {
+    max-width: 35px;
+}
+
+.search-box {
+    display: flex;
+    position: relative;
+}
+
+#search-suggestion {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 105%;
+
+    width: auto;
+    height: auto;
+
+    min-width: 15em;
+    max-height: 30vh;
+    overflow-x: auto;
+    overflow-y: auto;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(248, 248, 248, 0.96);
+    border-radius: 10px;
+    z-index: 50;
+}
+
+#search-suggestion ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#search-suggestion ul li {
+    list-style: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 2px solid #ddd;
+}
+
+#search-suggestion ul li:hover {
+    background-color: #ddd;
+}
+
+
+.weather-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 25em;
+    margin: 5px;
+    border-radius: 10px;
+
+    background-size: cover;
+}
+
+
+.search-result {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+#temprature-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 10px;
+    min-width: 10em;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 16px;
+    box-shadow: 0 7px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.53);
+}
+
+#weather-icon {
+    max-width: 8em;     /* to do */
+}
+
+
+#temprature-details > #location {
+    margin: 7px;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: large;
+    letter-spacing: 3px;
+    
+}
+
+#temprature-details > #temp {
+    margin: 1px;
+    font-size: 30px;
+}
+
+#temprature-details > #condition {
+    margin: 1px;
+    font-size: 16px;
+}
+
+
+
+#other-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+    min-width: 15em;
+    border-radius: 10px;
+    margin: 10px;
+
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 16px;
+    box-shadow: 0 7px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.53);
+
+}
+
+#other-details p {
+    margin: 0px 3px 3px 3px;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: large;
+    letter-spacing: 3px;
+}
+
+#other-details h3 {
+    margin: 3px;
+}
+
+.other-icon {
+    max-width: 60px;
+    margin-bottom: 5px;
+}
+
+.secondary-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+    min-width: 100px;
+    
+    border: 1px solid rgba(255, 255, 255, 0.53);
+    border-radius: 10px;
+}
+
+.other-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.other-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+
+
+/* Updating scroll bar look */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(204, 204, 204, 0.5);
+    border-radius: 10px;
+    
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5b5858;
+    border-radius: 10px;
+}
+/* End scroll bar */

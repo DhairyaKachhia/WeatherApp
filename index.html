@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="website-title">
+        <h1>Weather App</h1>
+    </nav>
+
+
+    <!--Icons: https://www.iconfinder.com/iconsets/weather-color-2 -->
+    <div id="background" style="background-image: url('./background/mountains-sunset.jpg');"></div>
+
+    <div class="main-content">
+
+        <div class="weather-content">
+            <div class="search">
+                <div class="search-box">
+                    <input type="text" placeholder="Enter city name..." id="search-input" autocomplete="off">
+
+                    <div id="search-suggestion">
+                        <ul id="search-list"></ul>
+                    </div>
+                </div>
+
+                <button onclick="searchCity()"><img src="./icons/search.png"></button>
+            </div>
+
+            <div class="search-result">
+                
+                <div id="temprature-details">
+                    <h4 id="location"></h4>
+                    <img id="weather-icon" src="icons/sunny-cloud.png">
+                    <h1 id="temp">- °C</h1>
+                    <p id="condition">weather</p>
+                </div>
+
+                <div id="other-details">
+                    <div class="other-1">
+                        <div class="secondary-info" id="wind-part">
+                            <p>Windy</p>
+                            <img class="other-icon" src="icons/wind.png">
+                            <h3 id="wind-value">- km/h</h3>
+                        </div>
+
+                        <div class="secondary-info" id="visibility-part">
+                            <p>Visiblity</p>
+                            <img class="other-icon" src="icons/visibility.png">
+                            <h3 id="visibility-value">- km</h3>
+                        </div>
+
+                        <div class="secondary-info" id="humidity-part">
+                            <p>Humidity</p>
+                            <img class="other-icon" src="icons/humidity.png">
+                            <h3 id="humidity-value">- %</h3>
+                        </div>
+                    </div>
+
+                    <div class="other-2">
+                        <div class="secondary-info" id="sunrise-part">
+                            <p>Sun-rise</p>
+                            <img class="other-icon" src="icons/sunrise.png">
+                            <h3 id="sunrise-value">hh/mm/ss</h3>
+                        </div>
+
+                        <div class="secondary-info" id="sunset-part">
+                            <p>Sun-set</p>
+                            <img class="other-icon" src="icons/sunset.png">
+                            <h3 id="sunset-value">hh/mm/ss</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+            
+            </div>
+
+            
+
+        </div>
+
+
+    </div>
+
+
+    <script src="./city.list.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+</html>
