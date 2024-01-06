@@ -49,15 +49,6 @@ async function searchCity() {
         const humidity = jsonResponse.main.humidity
         const sunrise = new Date(jsonResponse.sys.sunrise * 1000)
         const sunset = new Date(jsonResponse.sys.sunset * 1000)
-
-        
-
-        console.log(weatherIconDiv)
-        console.log(jsonResponse)
-        // console.log("Sunrise " + sunrise + "\n" +
-        //             "The sunrise time is: " + sunrise.toLocaleDateString()  + "\n" +
-        //             "The weather is: " + sunrise.toLocaleTimeString() + "\n");
-
         
 
         locationNameDiv.textContent = location;
@@ -102,15 +93,11 @@ searchInput.oninput = function() {
     currCityNumber = 0;
 
     if(searchValue.length > 1) {
-        console.log("In getResult() function")
-
         // Filter cities based on user input
         result = cityNameList.filter(city => {
             const cityName = city.name.toLowerCase();
             return cityName.includes(searchValue);
         });
-        
-        console.log("getResult() complete")
 
         searchResult.style.display = "block";
 
@@ -126,13 +113,10 @@ searchInput.oninput = function() {
 }
 
 function getResult(searchValue) {
-    console.log("Checking each city name in getResult()")
 
     let results = cityList.filter(
         city => { return city.toLowerCase().includes(searchValue) }
     );
-
-    console.log("DOne Checking each city name in getResult()")
 
     return results;
 
