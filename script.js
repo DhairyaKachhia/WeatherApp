@@ -114,8 +114,9 @@ searchInput.oninput = function() {
 
         searchResult.style.display = "block";
 
+        // Display only top 15 results
         while (currCityNumber < result.length && currCityNumber < MAX_CITY_TO_DISPLAY) {
-            searchResult.innerHTML += "<li>" + result[currCityNumber].name + ", " + result[currCityNumber].country + "</li>";
+            searchResult.innerHTML += "<li onclick=selectInput(this)>" + result[currCityNumber].name + ", " + result[currCityNumber].country + "</li>";
             currCityNumber++;
 
         }
@@ -136,3 +137,17 @@ function getResult(searchValue) {
     return results;
 
 }
+
+function selectInput(searchItem) {
+    searchInput.value = searchItem.innerHTML;
+    searchResult.innerHTML = "";
+    searchCity();
+    
+}
+
+// Event listener for the Enter key on search box
+searchInput.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        searchCity();
+    }
+});
