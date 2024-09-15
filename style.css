@@ -11,9 +11,7 @@ body {
     display: flex;
     position: relative;
     justify-content: center;
-
     background-color: rgba(120,213,211,1);
-    /* background: linear-gradient(180deg, rgba(120,213,211,1) 0%, rgba(49,127,130,0.8) 49%, rgba(11,55,56,0.1) 100%);  */
     color: #333;
 }
 
@@ -25,12 +23,9 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    /* background-image: url("./background/mountains-night.jpg"); */
-    /* background-image: url("./background/mountains-sunset.jpg"); */
     background-size: cover;
     filter: blur(5px);
     box-shadow: inset 0px -20px 70px 80px rgba(0, 0, 0, 0.2);
-
     transition: background-image 0.5s ease-in-out;
     z-index: -1;
 }
@@ -48,7 +43,6 @@ input {
     font-family: 'Comic Neue', cursive;
     background-color: rgba(248, 248, 248, 0.82);
     text-indent: 7px;
-
     border: 1px solid black;
     border-radius: 10px;
     font-size:medium;
@@ -62,7 +56,6 @@ button {
     background-color: rgba(248, 248, 248, 0.82);
     border-radius: 10px;
     border: 1px solid black;
-
     margin-left: 5px;
 }
 
@@ -123,7 +116,6 @@ button img {
     min-height: 25em;
     margin: 5px;
     border-radius: 10px;
-
     background-size: cover;
 }
 
@@ -152,7 +144,7 @@ button img {
 }
 
 #weather-icon {
-    max-width: 8em;     /* to do */
+    max-width: 8em;
 }
 
 
@@ -245,20 +237,7 @@ button img {
     .search-result {
         flex-direction: column;
     }
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Updating scroll bar look */
