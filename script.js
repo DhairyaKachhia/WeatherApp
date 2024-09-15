@@ -55,8 +55,6 @@ async function searchCity() {
     visDiv.textContent = visibility + " km";
     humidityDiv.textContent = humidity + "%";
 
-    // local Time should be search city's local time, not our place.
-    // ** Ex Indian city sun rise is shown in PM and sun set is shown in AM **
     sunRiseDiv.textContent = sunrise.toLocaleTimeString();
     sunSetDiv.textContent = sunset.toLocaleTimeString();
 
